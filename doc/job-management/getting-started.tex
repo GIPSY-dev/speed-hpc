@@ -48,10 +48,17 @@ You can check your path by typing:
     echo $PATH
 \end{verbatim}
 
-\noindent The next step is to set up your cluster-specific storage ``speed-scratch'', to do so, execute the following command from within your
-home directory.
+\noindent Each user is automatically assigned a personal scratch directory at
+\texttt{/speed-scratch/\$USER}. You can verify that it exists by running:
 \begin{verbatim}
-    mkdir -p /speed-scratch/$USER && cd /speed-scratch/$USER
+    ls -ld /speed-scratch/$USER
+\end{verbatim}
+
+\noindent If the directory does not exist, please contact \texttt{rt-ex-hpc AT encs.concordia.ca} for assistance.
+
+\noindent You can change to your scratch directory with:
+\begin{verbatim}
+    cd /speed-scratch/$USER
 \end{verbatim}
 
 \noindent Next, copy a job template to your cluster-specific storage
@@ -63,7 +70,7 @@ home directory.
 \end{itemize}
 
 \noindent \textbf{Tip:} the default shell for GCS ENCS users is \tool{tcsh}.
-If you would like to use \tool{bash}, please contact \texttt{rt-ex-hpc AT encs.concordia.ca}.
+If you would like to use \tool{bash}, please contact \texttt{rt-ex-hpc AT encs.concordia.ca} for assistance.
 
 \noindent \textbf{Note:} If you encounter a ``command not found'' error after logging in to Speed,
 your user account may have defunct Grid Engine environment commands.
